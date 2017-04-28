@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -o errexit    # always exit on error
+set -o pipefail   # dont ignore exit codes when piping output
+
+BUILD_DIR=${1:-}
+CACHE_DIR=${2:-}
+ENV_DIR=${3:-}
+
+NPM_TOKEN_FILE="$ENV_DIR/NPM_TOKEN"
+
+if [ -f "$NPM_TOKEN_FILE" ]; then
+    NPM_TOKEN=$(cat "$NPM_TOKEN_FILE") 
+    echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > "$HOME/.npmrc"
+fi

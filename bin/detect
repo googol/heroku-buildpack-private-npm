@@ -1,0 +1,6 @@
+#!/bin/bash
+
+BUILD_DIR=${1:-}
+
+echo "Node.js - Private npm package support"
+exit 0
