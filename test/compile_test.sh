@@ -16,5 +16,5 @@ testCompileWithNpmTokenCreatesProperNpmrc() {
 
     compile
     
-    assertFileMD5 "7738ff0e43d2ed3822b443cee90f6372" "$HOME/.npmrc"
+    assertFileMD5 "7738ff0e43d2ed3822b443cee90f6372" "/etc/npmrc"
 }

@@ -11,5 +11,5 @@ NPM_TOKEN_FILE="$ENV_DIR/NPM_TOKEN"
 
 if [ -f "$NPM_TOKEN_FILE" ]; then
     NPM_TOKEN=$(cat "$NPM_TOKEN_FILE") 
-    echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > "$HOME/.npmrc"
+    echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > "/etc/npmrc"
 fi
